@@ -39,7 +39,6 @@ func (s *Server) StartServer() {
 	mux := s.defineRoutes()
 	go func() {
 		s.logger.Info(fmt.Sprintf("Starting server on port %s", s.config.Port))
-		// Todo: Dynamically set port
 		if err := http.ListenAndServe(":"+s.config.Port, h2c.NewHandler(mux, &http2.Server{})); err != nil {
 			s.logger.Error(err.Error())
 		}
