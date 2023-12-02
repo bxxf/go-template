@@ -38,5 +38,6 @@ Each package can have its own router, contributing to the main router defined in
 
 `internal/server/config.go` defines environment variables used in the code
 
-## Environment variables and configuration
+## Environment variables and configuration
+
 `internal/config/routes.go` defines route handlers and gRPC reflection
